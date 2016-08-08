@@ -1,7 +1,10 @@
+var frameModule = require("ui/frame");
+
 exports.signIn = function() {
     alert("Signing in");
 };
 
 exports.register = function() {
-    alert("Registering");
+    var topmost = frameModule.topmost();
+    topmost.navigate("views/register/register");
 };
